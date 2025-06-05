@@ -25,4 +25,5 @@ A modern React weather application featuring dynamic backgrounds and Lottie anim
 ## 📦 Installation
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   [git clone https://github.com/your-username/weather-app.git
+](https://github.com/praveen93h/Weather-app.git)
