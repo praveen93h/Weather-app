@@ -3,7 +3,7 @@
 A modern React weather application featuring dynamic backgrounds and Lottie animations, powered by OpenWeatherMap API.
 
 ![App Screenshot](/public/screenshot.png)  
-*(Replace with your actual screenshot path)*
+
 
 ## ✨ Features
 - Animated Weather Icons: Lottie animations for all conditions (sun, rain, clouds, etc.)
