@@ -21,7 +21,7 @@ A modern React weather application featuring dynamic backgrounds and Lottie anim
 - Build: npm
 
 ##  Live Demo
-[[Vercel](https://img.shields.io/badge/Vercel-Deployed-%23000000?logo=vercel)](https://your-vercel-link.vercel.app)
+vercel - https://v0-weather-app-clone-green.vercel.app/
 
 ## 📦 Installation
 1. Clone the repo:
