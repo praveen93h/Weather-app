@@ -2,7 +2,8 @@
 
 A modern React weather application featuring dynamic backgrounds and Lottie animations, powered by OpenWeatherMap API.
 
-![App Screenshot](/public/screenshot.png)  
+![App Screen Capture](/public/screen_capute.gif)  
+
 
 
 ## ✨ Features
