@@ -1,0 +1,242 @@
+/* Base Dark Theme */
+:root {
+  --bg-color: #1a1a2e;
+  --card-color: #16213e;
+  --text-color: #e6e6e6;
+  --accent-color: #0f3460;
+  --highlight: #00b4d8;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.app {
+  transition:
+          background 0.8s cubic-bezier(0.65, 0, 0.35, 1),
+          box-shadow 0.8s ease;
+  min-height: 100vh;
+}
+
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-bar button {
+  padding: 0 1.5rem;
+  background: var(--highlight);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.search-bar button:hover {
+  background: #0096c7;
+}
+
+/* Weather Card */
+.weather-card {
+  background: var(--card-color);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.weather-card h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: var(--highlight);
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin: -1rem auto;
+  filter: drop-shadow(0 0 8px rgba(0, 180, 216, 0.4));
+}
+
+.weather-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.weather-stats p {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.weather-desc {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin-top: 1rem;
+  color: var(--highlight);
+}
+
+/* Loading & Error States */
+.loading {
+  color: var(--highlight);
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #ff6b6b;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Weather-specific card accents */
+.weather-card {
+  border-left: 4px solid var(--highlight);
+}
+
+.rain-card {
+  border-left-color: #4fc3f7;
+}
+
+.clear-card {
+  border-left-color: #ffd54f;
+}
+
+.clouds-card {
+  border-left-color: #90a4ae;
+}
+
+.thunder-card {
+  border-left-color: #ff8a65;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 138, 101, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 138, 101, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 138, 101, 0); }
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Loading and error states */
+.loading {
+  color: var(--highlight);
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.error {
+  color: #ff6b6b;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+.default-bg {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.3);
+}
+
+.clear-bg {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  box-shadow: inset 0 0 100px rgba(255,215,0,0.1);
+}
+
+.clouds-bg {
+  background: linear-gradient(135deg, #3a4a5f 0%, #607d8b 70%, #78909c 100%);
+  box-shadow: inset 0 0 100px rgba(255,255,255,0.1);
+}
+
+.rain-bg {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  box-shadow: inset 0 0 150px rgba(0,180,216,0.2);
+}
+
+.container {
+  transition: transform 0.5s ease;
+}
+
+.app:hover .container {
+  transform: scale(1.01);
+}
+
+.weather-icon {
+  margin: -20px auto;
+  filter:
+          drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))
+          brightness(1.1);
+  transition: filter 0.3s ease;
+}
+
+/* Weather-specific icon effects */
+.clear-card .weather-icon {
+  filter:
+          drop-shadow(0 0 12px rgba(255, 215, 0, 0.4))
+          brightness(1.2);
+}
+
+.rain-card .weather-icon {
+  animation: rainBounce 2s infinite;
+}
+
+@keyframes rainBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.thunder-card .weather-icon {
+  animation: thunderFlash 4s infinite;
+}
+
+@keyframes thunderFlash {
+  0%, 40%, 100% { opacity: 1; }
+  20% { opacity: 0.3; }
+}
